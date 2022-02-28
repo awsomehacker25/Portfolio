@@ -60,6 +60,7 @@
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-trophy"></i> <span>Achievements/Hobbies</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Gallery</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bxs-plane"></i> <span>Travel Diaries</span></a></li>
+          <li><a href="#projects" class="nav-link scrollto"><i class="bx bxs-plane"></i> <span>JS Projects</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -380,6 +381,408 @@
 
       </div>
     </section><!-- End Portfolio Section -->
+    <section id="projects" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>JS Projects</h2>
+          <p>Here are my Javascript projects that I made</p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <script>
+              function change()
+              {
+                  var a = document.getElementById("b1").value;
+                  document.getElementById("im1").style.height="200px";
+                  if (a=="Red Apple")
+                  {
+                      document.getElementById("im1").src="assets/img/redapple.jpeg"
+                      document.getElementById("b1").value="Green Apple";
+                      document.getElementById("b1").innerHTML="Green Apple";
+                  }
+                  else if(a=="Green Apple")
+                  {
+                      document.getElementById("im1").src="assets/img/greenapple.jpeg"
+                      document.getElementById("b1").value="Apple";
+                      document.getElementById("b1").innerHTML="Apple";
+                  }
+                  else if(a=="Apple")
+                  {
+                      document.getElementById("im1").src="assets/img/apple.jpeg"
+                      document.getElementById("b1").value="Red Apple";
+                      document.getElementById("b1").innerHTML="Red Apple";
+                  }
+              }
+          </script>
+            <h1>Changing the image and caption of the button</h1>
+            <img src="assets/img/apple.jpeg" id="im1" alt="">
+            <button onclick="change()" id="b1" value="Red Apple">Red Apple</button>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function textfamily(){
+                  var d = document.getElementById("cob").value;
+                  document.getElementById("con").style.fontFamily=d;
+              }
+      
+              function textcolor(){
+                  var c = document.getElementById("col").value;
+                  document.getElementById("con").style.color=c;
+              }
+      
+              function textsize(){
+                  var b = document.getElementById("com").value;
+                  document.getElementById("con").style.fontSize=b+"px";
+              }
+      
+              function bgcolor(){
+                  var a = document.getElementById("cot").value;
+                  document.getElementById("con").style.backgroundColor=a;
+              }
+          </script>
+            <h1>Styling a text</h1>
+            <p id="con">This is my Javascript code. Please click on the buttons to change the attributes of this text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic alias, dicta possimus quaerat fugiat dolores in mollitia, perferendis, et dolorum sapiente commodi ratione voluptates impedit iusto sed. Magni, eligendi hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sunt ab, facilis voluptatum rem qui quis debitis unde in nobis aut ullam est, accusamus vel doloribus alias, architecto animi neque!</p>
+
+            Choose the font type:
+            <select name="" id="cob" onchange="textfamily()">
+                <option value=""></option>
+                <option value="Verdana">Verdana</option>
+                <option value="Courier">Courier</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        
+            <br>
+        
+            Choose the font color:
+            <select name="" id="col" onchange="textcolor()">
+                <option value=""></option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Orange">Orange</option>
+            </select>
+        
+            <br>
+        
+            Choose the font size:
+            <select name="" id="com" onchange="textsize()">
+                <option value=""></option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+            </select>
+        
+            <br>
+        
+            Choose the background color:
+            <select name="" id="cot" onchange="bgcolor()">
+                <option value=""></option>
+                <option value="Grey">Grey</option>
+                <option value="Green">Green</option>
+                <option value="Purple">Purple</option>
+            </select>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function sum(){
+                  var n1 = parseInt(document.getElementById("n1").value);
+                  var n2 = parseInt(document.getElementById("n2").value);
+                  document.getElementById("res0").value=n1+n2;
+              }
+      
+              function sub(){
+                  var n1 = parseInt(document.getElementById("n1").value);
+                  var n2 = parseInt(document.getElementById("n2").value);
+                  document.getElementById("res0").value=n1-n2;
+              }
+      
+              function mult(){
+                  var n1 = parseInt(document.getElementById("n1").value);
+                  var n2 = parseInt(document.getElementById("n2").value);
+                  document.getElementById("res0").value=n1*n2;
+              }
+      
+              function div(){
+                  var n1 = parseInt(document.getElementById("n1").value);
+                  var n2 = parseInt(document.getElementById("n2").value);
+                  document.getElementById("res0").value=n1/n2;
+              }
+      
+              // function pow(){
+              //     var n1 = parseInt(document.getElementById("n1").value);
+              //     var n2 = parseInt(document.getElementById("n2").value);
+              //     alert(n1^n2)
+              // }
+      
+              function rem(){
+                  var n1 = parseInt(document.getElementById("n1").value);
+                  var n2 = parseInt(document.getElementById("n2").value);
+                  document.getElementById("res0").value=n1%n2;
+              }
+          </script>
+            <h1>Calculator</h1>
+            Enter number 1:
+            <input type="text" name="n1" id="n1">
+        
+            <br>
+        
+            Enter number 2:
+            <input type="text" name="n2" id="n2">
+        
+            <br>
+        
+            <button onclick="sum()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mult()">*</button>
+            <button onclick="div()">/</button>
+            <!-- <button onclick="pow()">^</button> -->
+            <button onclick="rem()">%</button>
+        
+            <br>
+        
+            Result:
+        
+            <input type="text" id="res0" disabled>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>       
+              function sel(){
+                  var ch = document.getElementById("choice").value;
+                  document.getElementById("heading").innerHTML = ch;
+                  if (ch=="Fahrenheit to Celsius"){
+                      document.getElementById("label1").innerHTML = "Enter Fahrenheit: ";
+                      document.getElementById("label2").innerHTML = "Celsius: ";
+                      document.getElementById("in1").value = "";
+                      document.getElementById("res").value = "";
+                  }
+                  else if (ch=="Celsius to Fahrenheit"){
+                      document.getElementById("label1").innerHTML = "Enter Celsius: ";
+                      document.getElementById("label2").innerHTML = "Fahrenheit: ";
+                      document.getElementById("in1").value = "";
+                      document.getElementById("res").value = "";
+                  }
+                  else {
+                      document.getElementById("label1").innerHTML = "";
+                      document.getElementById("label2").innerHTML = "";
+                      document.getElementById("in1").value = "";
+                      document.getElementById("res").value = "";
+                  }
+              }
+      
+              function convert(){
+                  var ch = document.getElementById("choice").value;
+                  if (ch=="Fahrenheit to Celsius"){
+                      var fah = document.getElementById("in1").value;
+                      var cel = (fah-32) * 5/9
+                      document.getElementById("res").value=cel;
+                  }
+                  else if (ch=="Celsius to Fahrenheit"){
+                      var cel = document.getElementById("in1").value;
+                      var fah = (cel*9/5) + 32
+                      document.getElementById("res").value=fah;
+                  }
+              }
+          </script>
+            <h1>Choose a temperature conversion:</h1>
+            <select name="" id="choice" onchange="sel()">
+                <option value=""></option>
+                <option value="Fahrenheit to Celsius">Fahrenheit to Celsius</option>
+                <option value="Celsius to Fahrenheit">Celsius to Fahrenheit</option>
+            </select>
+        
+            <h1 id="heading"></h1>
+            <label id="label1"></label>
+            <input type="text" id="in1">
+            <br><br>
+            <button onclick="convert()">Calculate</button>
+            <br><br>
+            <label id="label2"></label>
+            <input type="text" id="res" disabled>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  var num = document.getElementById("num").value;
+                  var sum = 0;
+                  document.getElementById("res2").innerHTML = "";
+                  for(var a=1; a<=num; a++){
+                      sum+=a;
+                  }
+                  document.getElementById("res2").innerHTML = sum;
+              }
+          </script>
+            <h1>Displaying the sum of natural numbers</h1>
+            <label for="n">Enter amount of numbers: </label>
+            <input type="text" id="num">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res2">Result: </label>
+            <p id="res2"></p>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  var n = document.getElementById("num2").value;
+                  var num = document.getElementById("num2").value;
+                  document.getElementById("res3").innerHTML = "";
+                  for(var a=num-1; a>=1; a--){
+                      num = num * a
+                  }
+                  document.getElementById("res3").innerHTML = n + "!" + " = " + num;
+              }
+          </script>
+            <h1>Displaying the factorial of a number</h1>
+            <label for="n">Enter number: </label>
+            <input type="text" id="num2">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res3">Result: </label>
+            <p id="res3"></p>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  var num = document.getElementById("num3").value;
+                  isPrime = true
+                  document.getElementById("res4").innerHTML = "";
+                  for(var a=2; a<num; a++){
+                      if (num % a == 0){
+                          isPrime = false
+                          break
+                      } else {
+                          isPrime = true
+                      }
+      
+                  }
+                  if (isPrime == true){
+                      document.getElementById("res4").innerHTML = num + " is a prime number";
+                  }
+                  else{
+                      document.getElementById("res4").innerHTML = num + " is not a prime number";
+                  }
+              }
+          </script>
+            <h1>Displaying if a number is prime or not</h1>
+            <label for="n">Enter number: </label>
+            <input type="text" id="num3">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res4">Result: </label>
+            <p id="res4"></p>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  var num = document.getElementById("num4").value;
+                  n1 = 0
+                  n2 = 1
+                  var nextTerm = 0;
+                  document.getElementById("res5").innerHTML = "";
+                  for(var a=1; a<=num; a++){
+                      document.getElementById("res5").innerHTML += n1 + " ";
+                      nextTerm = n1+n2
+                      n1 = n2
+                      n2 = nextTerm
+                  }
+              }
+          </script>
+            <h1>Displaying the fibonacci sequence</h1>
+            <label for="n">Enter number of terms: </label>
+            <input type="text" id="num4">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res5">Result: </label>
+            <p id="res5"></p>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  document.getElementById("res6").innerHTML = " "
+                  const lownum = document.getElementById("num7").value;
+                  const highnum = document.getElementById("num8").value;
+                  for (let i = lownum; i <= highnum; i++) {
+                      let flag = 0;
+                      for (let j = 2; j < i; j++) {
+                          if (i % j == 0) {
+                              flag = 1;
+                              break;
+                          }
+                      }
+                      if (i > 1 && flag == 0) {
+                          document.getElementById("res6").innerHTML += i + " "
+                      }
+                  }
+              }
+          </script>
+            <h1>Displaying if a number is prime or not within a range</h1>
+            <label for="n">Enter first number: </label>
+            <input type="text" id="num7">
+            <label for="n">Enter second number: </label>
+            <input type="text" id="num8">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res6">Result: </label>
+            <p id="res6"></p>
+          <br><br><br>
+          </div>
+
+          <div>
+            <script>
+              function disp()
+              {
+                  document.getElementById("res8").innerHTML = " "
+                  const num = document.getElementById("num9").value;
+                  for (let i = 1; i <= num; i++) {
+                      if(num % i == 0){
+                          document.getElementById("res8").innerHTML += i + " "
+                      }
+                  }
+              }
+          </script>
+            <h1>Displaying the factors of a number</h1>
+            <label for="n">Enter number: </label>
+            <input type="text" id="num9">
+            <br><br>
+            <button onclick="disp()">Check</button>
+            <br><br>
+            <label for="res8">Result: </label>
+            <p id="res8"></p>
+          <br><br><br>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -402,7 +805,7 @@
 
               <h3>Feedback Form:</h1>
 
-              <form action="mailto:gamingaaryaman@outlook.com?subject=Feedback" method="post" enctype="text/plain" autocomplete="on" target="_self">
+              <form action="submit_student_form.php" method="post">
                 <label for="fname">Enter name:</label>
                 <input type="text" id="fname" name="fname">
                 <br> <br>
@@ -424,7 +827,7 @@
                 <textarea style="min-height: 200px;" name="suggestions"></textarea>
                 <input type="submit">
                 <input type="reset" value="Clear">
-            </form>
+              </form>
             </div>
 
           </div>
