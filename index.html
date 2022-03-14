@@ -830,46 +830,45 @@
 
           <div>
             <style>
-              #bb1{
+              .bb1{
                   padding: 10px;
                   background-color: white;
               }
-              input[type=button], #pog{
+              input[type=button], #display{
                   font-size: 20px;
                   border: 0px;
                   padding: 10px;
                   background-color: white;
               }
-              
           </style>
           <h1>Standard JS Calculator</h1>
           <table border="2">
               <tr>
-                  <td colspan="4"><input type="text" id="pog" disabled id="display" style="text-align: right;"></td>
+                  <td colspan="4"><input type="text" disabled id="display" style="text-align: right;"></td>
               </tr>
               <tr>
-                  <td id="bb1"><input type="button" name="b1" value="1" onclick="display.value += '1'"></td>
-                  <td id="bb1"><input type="button" name="b2" value="2" onclick="display.value += '2'"></td>
-                  <td id="bb1"><input type="button" name="b3" value="3" onclick="display.value += '3'"></td>
-                  <td id="bb1"><input type="button" name="add" value="+" onclick="display.value += '+'"></td>
+                  <td class="bb1"><input type="button" name="b1" value="1" onclick="display.value += '1'"></td>
+                  <td class="bb1"><input type="button" name="b2" value="2" onclick="display.value += '2'"></td>
+                  <td class="bb1"><input type="button" name="b3" value="3" onclick="display.value += '3'"></td>
+                  <td class="bb1"><input type="button" name="add" value="+" onclick="display.value += '+'"></td>
               </tr>
               <tr>
-                  <td id="bb1"><input type="button" name="b4" value="4" onclick="display.value += '4'"></td>
-                  <td id="bb1"><input type="button" name="b5" value="5" onclick="display.value += '5'"></td>
-                  <td id="bb1"><input type="button" name="b6" value="6" onclick="display.value += '6'"></td>
-                  <td id="bb1"><input type="button" name="sub" value="-" onclick="display.value += '-'"></td>
+                  <td class="bb1"><input type="button" name="b4" value="4" onclick="display.value += '4'"></td>
+                  <td class="bb1"><input type="button" name="b5" value="5" onclick="display.value += '5'"></td>
+                  <td class="bb1"><input type="button" name="b6" value="6" onclick="display.value += '6'"></td>
+                  <td class="bb1"><input type="button" name="sub" value="-" onclick="display.value += '-'"></td>
               </tr>
               <tr>
-                  <td id="bb1"><input type="button" name="b7" value="7" onclick="display.value += '7'"></td>
-                  <td id="bb1"><input type="button" name="b8" value="8" onclick="display.value += '8'"></td>
-                  <td id="bb1"><input type="button" name="b9" value="9" onclick="display.value += '9'"></td>
-                  <td id="bb1"><input type="button" name="prod" value="x" onclick="display.value += '*'"></td>
+                  <td class="bb1"><input type="button" name="b7" value="7" onclick="display.value += '7'"></td>
+                  <td class="bb1"><input type="button" name="b8" value="8" onclick="display.value += '8'"></td>
+                  <td class="bb1"><input type="button" name="b9" value="9" onclick="display.value += '9'"></td>
+                  <td class="bb1"><input type="button" name="prod" value="x" onclick="display.value += '*'"></td>
               </tr>
               <tr>
-                  <td id="bb1"><input type="button" name="clear" value="C" onclick="display.value = ''"></td>
-                  <td id="bb1"><input type="button" name="b0" value="0" onclick="display.value += '0'"></td>
-                  <td id="bb1"><input type="button" name="div" value="/" onclick="display.value += '/'"></td>
-                  <td id="bb1"><input type="button" name="equal" value="=" onclick="display.value=eval(display.value)"></td>
+                  <td class="bb1"><input type="button" name="clear" value="C" onclick="display.value = ''"></td>
+                  <td class="bb1"><input type="button" name="b0" value="0" onclick="display.value += '0'"></td>
+                  <td class="bb1"><input type="button" name="div" value="/" onclick="display.value += '/'"></td>
+                  <td class="bb1"><input type="button" name="equal" value="=" onclick="display.value=eval(display.value)"></td>
               </tr>
           </table>
           </div>
