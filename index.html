@@ -34,7 +34,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload="rclock()">
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -60,7 +60,7 @@
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-trophy"></i> <span>Achievements/Hobbies</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Gallery</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bxs-plane"></i> <span>Travel Diaries</span></a></li>
-          <li><a href="#projects" class="nav-link scrollto"><i class="bx bxs-plane"></i> <span>JS Projects</span></a></li>
+          <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>JS Projects</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -72,6 +72,55 @@
     <div class="hero-container" data-aos="fade-in">
       <h1>Aaryaman Chopra</h1>
       <p>I'm a <span class="typed" data-typed-items="Student, Developer, Athlete, Musician"></span></p>
+      <script>
+        function rclock(){
+            var hh=new Date().getHours();
+            var mm=new Date().getMinutes();
+            var ss=new Date().getSeconds();
+            if(hh<10)
+            {hh='0'+hh;}
+            if(mm<10)
+            {mm='0'+mm;}
+            if(ss<10)
+            {ss='0'+ss;}
+            document.getElementById("t1").innerHTML=hh;
+            document.getElementById("t2").innerHTML=mm;
+            document.getElementById("t3").innerHTML=ss;
+            refresh3();
+        }
+        function refresh3(){
+            var r=1000;
+            myt=setTimeout('rclock()', r);
+        }
+    </script>
+    <style>
+        #t1, #t2, #t3{
+            background-color: red;
+            font-size: 40px;
+            color: white;
+            padding: 5px;
+            border-style: solid;
+            border-width: thin;
+            width: fit-content;
+        }
+        #k1, #k2{
+            color: white;
+            font-size: 40px;
+        }
+    </style>
+    <table>
+        <td> 
+            <tr>
+                <td id="t1"></td>
+                <td id="k1">:</td>
+                <td id="t2"></td>
+                <td id="k2">:</td>
+                <td id="t3"></td>
+            </tr>
+        </td>
+    </table>
+    </div>
+    <div>
     </div>
   </section><!-- End Hero -->
 
@@ -777,6 +826,52 @@
             <label for="res8">Result: </label>
             <p id="res8"></p>
           <br><br><br>
+          </div>
+
+          <div>
+            <style>
+              #bb1{
+                  padding: 10px;
+                  background-color: white;
+              }
+              input[type=button], #pog{
+                  font-size: 20px;
+                  border: 0px;
+                  padding: 10px;
+                  background-color: white;
+              }
+              
+          </style>
+          <h1>Standard JS Calculator</h1>
+          <table border="2">
+              <tr>
+                  <td colspan="4"><input type="text" id="pog" disabled id="display" style="text-align: right;"></td>
+              </tr>
+              <tr>
+                  <td id="bb1"><input type="button" name="b1" value="1" onclick="display.value += '1'"></td>
+                  <td id="bb1"><input type="button" name="b2" value="2" onclick="display.value += '2'"></td>
+                  <td id="bb1"><input type="button" name="b3" value="3" onclick="display.value += '3'"></td>
+                  <td id="bb1"><input type="button" name="add" value="+" onclick="display.value += '+'"></td>
+              </tr>
+              <tr>
+                  <td id="bb1"><input type="button" name="b4" value="4" onclick="display.value += '4'"></td>
+                  <td id="bb1"><input type="button" name="b5" value="5" onclick="display.value += '5'"></td>
+                  <td id="bb1"><input type="button" name="b6" value="6" onclick="display.value += '6'"></td>
+                  <td id="bb1"><input type="button" name="sub" value="-" onclick="display.value += '-'"></td>
+              </tr>
+              <tr>
+                  <td id="bb1"><input type="button" name="b7" value="7" onclick="display.value += '7'"></td>
+                  <td id="bb1"><input type="button" name="b8" value="8" onclick="display.value += '8'"></td>
+                  <td id="bb1"><input type="button" name="b9" value="9" onclick="display.value += '9'"></td>
+                  <td id="bb1"><input type="button" name="prod" value="x" onclick="display.value += '*'"></td>
+              </tr>
+              <tr>
+                  <td id="bb1"><input type="button" name="clear" value="C" onclick="display.value = ''"></td>
+                  <td id="bb1"><input type="button" name="b0" value="0" onclick="display.value += '0'"></td>
+                  <td id="bb1"><input type="button" name="div" value="/" onclick="display.value += '/'"></td>
+                  <td id="bb1"><input type="button" name="equal" value="=" onclick="display.value=eval(display.value)"></td>
+              </tr>
+          </table>
           </div>
 
         </div>
