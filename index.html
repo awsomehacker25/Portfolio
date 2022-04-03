@@ -871,6 +871,86 @@
                   <td class="bb1"><input type="button" name="equal" value="=" onclick="display.value=eval(display.value)"></td>
               </tr>
           </table>
+          <br><br><br>
+          </div>
+
+          <div>
+            <h1>Drawing faces with canvas</h1>
+            <canvas id="canva1" height="500" width="1100" style="border:2px solid black; background-color: antiquewhite;"></canvas>
+            <script>
+              var can=document.getElementById("canva1");
+              var p=can.getContext("2d");
+              function circle(x, y, rad, stang, endang, col){
+                  p.beginPath();
+                  p.arc(x, y, rad, stang, endang)
+                  p.fillStyle = col;
+                  p.fill()
+                  p.stroke()
+              }
+              x=150
+              color="black"
+              color2="orange"
+              color3="red"
+              for(i=1;i<=2;i++){
+                  // happy face
+                  // outer face
+                  circle(x, 150, 120, 0, 2*Math.PI, color2)
+                  // left outer eye
+                  circle(x-50, 100, 30, 0, 2*Math.PI)
+                  // right outer eye
+                  circle(x+50, 100, 30, 0, 2*Math.PI)
+                  // left inner eye
+                  circle(x-50, 100, 15, 0, 2*Math.PI, color)
+                  // right inner eye
+                  circle(x+50, 100, 15, 0, 2*Math.PI)
+                  // nose
+                  circle(x, 155, 20, 0, 2*Math.PI, color3)
+                  x+=350
+                  color2="lightblue"
+                  color3="blue"
+              }
+              p.font="14px verdana"
+              p.fillText("Happy Face", 110, 300)
+              // smile
+              p.beginPath();
+              p.arc(150, 165, 70, 0, Math.PI)
+              p.stroke();
+              // frown
+              p.beginPath();
+              p.arc(500, 235, 55, 0, Math.PI, true)
+              p.stroke();
+      
+              p.font="14px verdana"
+              p.fillText("Sad Face", 460, 300)
+      
+              // mickey face
+              // left outer ear
+              circle(740, 50, 40, 0, 2*Math.PI, "black")
+              // right outer ear
+              circle(960, 50, 40, 0, 2*Math.PI, "black")
+              // left inner ear
+              circle(740, 50, 20, 0, 2*Math.PI, "white")
+              // right inner ear
+              circle(960, 50, 20, 0, 2*Math.PI, "white")
+              // outer face
+              circle(850, 150, 120, 0, 2*Math.PI, "lightgreen")
+              // left outer eye
+              circle(800, 100, 30, 0, 2*Math.PI)
+              // right outer eye
+              circle(900, 100, 30, 0, 2*Math.PI)
+              // left inner eye
+              circle(800, 100, 15, 0, 2*Math.PI, "black")
+              // right inner eye
+              circle(900, 100, 15, 0, 2*Math.PI, "black")
+              // nose
+              circle(850, 165, 20, 0, 2*Math.PI, "purple")
+              // smile
+              p.beginPath();
+              p.arc(850, 165, 75, 0, 1*Math.PI)
+              p.stroke()
+              p.font="14px verdana"
+              p.fillText("Mickey Face", 810, 300)
+          </script>
           </div>
 
         </div>
