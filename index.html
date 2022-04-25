@@ -951,6 +951,32 @@
               p.font="14px verdana"
               p.fillText("Mickey Face", 810, 300)
           </script>
+          <br><br><br>
+          </div>
+
+          <div>
+            <h1>Greeting Card</h1>
+            <canvas id="canva5" height="300" width="700" style="border:2px solid black; background-color: antiquewhite;"></canvas>
+            <script>
+              var can=document.getElementById("canva5");
+              var p=can.getContext("2d");
+      
+              var img = new Image();
+              img.onload=start;
+              img.onerror=function(){alert(img.src + " failing to load")}
+              img.src="assets/img/newyear.jpg"
+              function start(){
+                  p.drawImage(img, 375, 50, 300, 200)
+              }
+      
+              p.font="20px arial"
+              p.fillStyle="red";
+              p.fillText("Happy New Year!!!", 20, 50)
+              p.fillText("Wish you the best for the coming year!", 20, 100)
+              p.fillText("From,", 20, 170)
+              p.fillText("Aaryaman", 20, 210)
+          </script>
+          <br><br><br>
           </div>
 
         </div>
